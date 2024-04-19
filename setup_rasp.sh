@@ -16,7 +16,7 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 
 ### Iniciar serviço de transcrição
 
@@ -31,6 +31,8 @@ sudo docker compose up --build -d
 git clone https://github.com/projetorepositor/firmware.git
 
 cd firmware
+
+pip3 install -r requirements.txt
 
 sudo bash setup_main_config.sh
 
