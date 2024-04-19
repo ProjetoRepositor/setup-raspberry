@@ -28,6 +28,8 @@ sudo docker compose up --build -d
 
 ### Iniciar Daemons
 
+cd
+
 git clone https://github.com/projetorepositor/firmware.git
 
 cd firmware
