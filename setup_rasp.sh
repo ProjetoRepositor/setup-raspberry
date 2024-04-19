@@ -30,15 +30,19 @@ sudo docker compose up --build -d
 
 cd
 
+sudo apt install portaudio19-dev
+
 git clone https://github.com/projetorepositor/firmware.git
 
 cd firmware
 
-pip3 install -r requirements.txt
+pip3 install numpy gpiozero pyaudio requests
 
 sudo bash setup_main_config.sh
 
 sudo bash setup_wifi_service.sh
+
+chmod 666 /dev/ttyS0
 
 cd ..
 
